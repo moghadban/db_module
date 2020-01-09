@@ -1,0 +1,25 @@
+dbmodule:
+  #Adding CSS files to db_module
+  css:
+    component:
+      # Custom defined JavaScript dependencies which include custom files:
+      # dbmodule.css, and bootstrap.bundle.min.css
+      css/dbmodule.css: {}
+      css/bootstrap.min.css : {}
+  # Adding js files to db_module.
+  js:
+    # Custom defined JavaScript dependencies which include custom files:
+    # dbmodule.js, dbmodule_update.js, bootstrap.min.js, bootstrap.bundle.min.js, bootstrap.bundle.js, and all.js (for fontawsome)
+    js/dbmodule.js: {}
+    js/dbmodule_update.js: {}
+    js/bootstrap.min.js : {}
+    js/bootstrap.bundle.min.js : {}
+    js/bootstrap.bundle.js : {}
+    js/all.js: {} 
+    
+  # Drupal 8 dependencies which include: core/jquery, core/drupalSettings, core/drupal, and core/jquery.min
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery.min

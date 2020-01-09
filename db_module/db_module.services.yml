@@ -1,0 +1,8 @@
+# This declares the plug-in manager to the service container. For background
+# information on the service container, see https://www.drupal.org/node/2133171.
+# Changes here require that the cache be cleared in order to have Drupal notice
+# them.
+services:
+  db_module.repository:
+    class: Drupal\db_module\DbModuleRepository
+    arguments: ['@database', '@string_translation', '@messenger']

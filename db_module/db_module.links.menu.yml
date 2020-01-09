@@ -1,0 +1,11 @@
+db_module.description:
+  title: List
+  route_name: db_module.generate_entry_list
+  expanded: TRUE
+  parent: main
+  menu_name: main
+db_module.add:
+  title: Add entry
+  route_name: db_module.add
+  weight: 0
+  parent: db_module.description

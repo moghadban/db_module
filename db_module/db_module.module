@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Description and reference for db_Module database API.
+ *
+ * @author
+ * Mojahed Ghadban
+ *
+ * @name
+ * DB Module
+ * 
+ * @type
+ * module
+ *
+ * @package
+ * Custom
+ *
+ * @description
+ * Database API with Pagers, Search, & Sortable table
+ *
+ */
+
+/**
+ * @defgroup db_module Example: Database (DBModule)
+ * @ingroup examples
+ * @{
+ * Database db_module
+ *
+ * The database queries for this example module are located in the
+ * \Drupal\db_module\DbModuleRepository class.
+ *
+ * General documentation is available at @link
+ * https://www.drupal.org/docs/8/api/database-api Database API @endlink.
+ *
+ * @see database
+ * @see \Drupal\db_module\DbModuleRepository
+ * @see \Drupal\Core\Database\Connection:delete()
+ * @see \Drupal\Core\Database\Connection:insert()
+ * @see \Drupal\Core\Database\Connection:select()
+ * @see \Drupal\Core\Database\Connection:update()
+ */
+
+/**
+ * @} End of "defgroup db_module".
+ */

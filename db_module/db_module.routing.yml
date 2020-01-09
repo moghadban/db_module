@@ -1,0 +1,34 @@
+db_module.generate_entry_list:
+  path: '/modules/db_module/generate_entry_list'
+  defaults:
+    _title: 'Database API Generate List'
+    _controller: '\Drupal\db_module\Controller\DbModuleController::getDBModuleDescription'
+  requirements:
+    _permission: 'access content'
+
+db_module.list:
+  path: '/modules/db_module/list/{textcheck}'
+  defaults:
+    _title: 'List'
+    _form: '\Drupal\db_module\Form\DbModuleListForm'
+    textcheck: NULL
+  requirements:
+    _permission: 'access content'
+
+db_module.add:
+  path: '/modules/db_module/add'
+  defaults:
+    _title: 'Add entry'
+    _form: '\Drupal\db_module\Form\DbModuleAddForm'
+  requirements:
+    _permission: 'access content'
+
+db_module.update:
+  path: '/modules/db_module/update/{uid}'
+  defaults:
+    _title: 'Update entry'
+    _form: '\Drupal\db_module\Form\DbModuleUpdateForm'
+    uid: NULL
+  requirements:
+    _permission: 'access content'
+    

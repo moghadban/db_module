@@ -1,0 +1,13 @@
+name: DB Module
+type: module
+description: 'Database API with Pagers, search, & sortable table'
+author: Mojahed Ghadban
+package: Custom
+core: 8.x
+dependencies:
+  - drupal:node
+  - drupal:user
+
+# Information added by Drupal.org packaging script on 2019-08-23
+version: '8.x-1.0'
+datestamp: 1566573495

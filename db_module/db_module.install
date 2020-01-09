@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @file
+ * db_module.install
+ *
+ * @author
+ * Mojahed Ghadban
+ *
+ * @name
+ * DB Module
+ * 
+ * @type
+ * module
+ *
+ * @package
+ * Custom
+ *
+ * @description
+ * Database API with Pagers, Search, & Sortable table
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Creates some default entries in db_module custom generated table.
+ *
+ * @see hook_install()
+ *
+ * @ingroup db_module
+ */
+function db_module_install() {
+  // Insert some random generated data into schema.
+  $entries = [
+["uid"=> "667275190","first_name"=> "Daron","last_name"=> "Dewar","gender"=> "Female", "street_address"=>"Ap #948-9675 Sagittis. Rd.","city"=>"New Haven","state"=>"CT","zip"=>"57367"],
+["uid"=> "591089393","first_name"=> "Morgun","last_name"=> "Hamerton","gender"=> "Female", "street_address"=>"1687 Mauris Ave","city"=>"Rockford","state"=>"IL","zip"=>"80821"],
+["uid"=> "462020117","first_name"=> "Osmund","last_name"=> "Andrzej","gender"=> "Male", "street_address"=>"4354 Ac Av.","city"=>"Toledo","state"=>"OH","zip"=>"98874"],
+["uid"=> "231403785","first_name"=> "Niel","last_name"=> "Warsap","gender"=> "Male", "street_address"=>"104-624 Cras Avenue","city"=>"Baton Rouge","state"=>"LA","zip"=>"92532"],
+["uid"=> "808491058","first_name"=> "Michel","last_name"=> "Axby","gender"=> "Male", "street_address"=>"973-6347 Libero Avenue","city"=>"Pittsburgh","state"=>"PA","zip"=>"89123"],
+["uid"=> "712713375","first_name"=> "Diandra","last_name"=> "Tolhurst","gender"=> "Female", "street_address"=>"Ap #187-9190 Duis Road","city"=>"Fort Collins","state"=>"CO","zip"=>"38506"],
+["uid"=> "572089545","first_name"=> "Darryl","last_name"=> "Dibben","gender"=> "Male", "street_address"=>"P.O. Box 321, 1239 Eu St.","city"=>"Olympia","state"=>"WA","zip"=>"63287"],
+["uid"=> "506476012","first_name"=> "Candie","last_name"=> "Dun","gender"=> "Male", "street_address"=>"728-3398 Posuere Street","city"=>"Augusta","state"=>"ME","zip"=>"29734"],
+["uid"=> "123827031","first_name"=> "Reese","last_name"=> "Smuth","gender"=> "Female", "street_address"=>"Ap #943-7070 Iaculis Road","city"=>"Aurora","state"=>"CO","zip"=>"82610"],
+["uid"=> "303299134","first_name"=> "Penelopa","last_name"=> "Penna","gender"=> "Male", "street_address"=>"5426 Quisque Road","city"=>"Kansas city","state"=>"KS","zip"=>"23346"],
+["uid"=> "584520859","first_name"=> "Darnell","last_name"=> "Cornthwaite","gender"=> "Female", "street_address"=>"549-4169 Curabitur Avenue","city"=>"Virginia Beach","state"=>"VA","zip"=>"71351"],
+["uid"=> "572110964","first_name"=> "Rahal","last_name"=> "Sammon","gender"=> "Female", "street_address"=>"795-510 Risus. Av.","city"=>"Kaneohe","state"=>"HI","zip"=>"40768"],
+["uid"=> "319801160","first_name"=> "Carey","last_name"=> "Andrioletti","gender"=> "Female", "street_address"=>"4400 Ullamcorper Street","city"=>"Cambridge","state"=>"MA","zip"=>"51554"],
+["uid"=> "214578199","first_name"=> "Wayland","last_name"=> "Inwood","gender"=> "Male", "street_address"=>"Ap #303-2057 Luctus Rd.","city"=>"Iowa city","state"=>"IA","zip"=>"42974"],
+["uid"=> "659655196","first_name"=> "Valaria","last_name"=> "Devanney","gender"=> "Male", "street_address"=>"9400 Eget, Rd.","city"=>"Independence","state"=>"MO","zip"=>"94098"],
+["uid"=> "668182471","first_name"=> "Mace","last_name"=> "Enevold","gender"=> "Female", "street_address"=>"P.O. Box 900, 2548 Etiam Av.","city"=>"San Antonio","state"=>"TX","zip"=>"38287"],
+["uid"=> "238618974","first_name"=> "Danie","last_name"=> "Northedge","gender"=> "Male", "street_address"=>"6295 Sed St.","city"=>"Ketchikan","state"=>"AK","zip"=>"99694"],
+["uid"=> "759069558","first_name"=> "Joannes","last_name"=> "Eve","gender"=> "Female", "street_address"=>"5878 Mattis Av.","city"=>"Memphis","state"=>"TN","zip"=>"85000"],
+["uid"=> "710717975","first_name"=> "Barr","last_name"=> "Adolphine","gender"=> "Male", "street_address"=>"Ap #474-7666 Dui, Ave","city"=>"Owensboro","state"=>"KY","zip"=>"83853"],
+["uid"=> "139107039","first_name"=> "Dacie","last_name"=> "Fehners","gender"=> "Female", "street_address"=>"955-8036 Dapibus Avenue","city"=>"Davenport","state"=>"IA","zip"=>"90514"],
+["uid"=> "213867545","first_name"=> "Cornelle","last_name"=> "Joron","gender"=> "Female", "street_address"=>"6366 Et Ave","city"=>"Bridgeport","state"=>"CT","zip"=>"64945"],
+["uid"=> "508433652","first_name"=> "Rabi","last_name"=> "Aldam","gender"=> "Male", "street_address"=>"104-5594 Eleifend Avenue","city"=>"Provo","state"=>"UT","zip"=>"15838"],
+["uid"=> "611640962","first_name"=> "Hermione","last_name"=> "Eusden","gender"=> "Male", "street_address"=>"8428 Dictum Avenue","city"=>"Newark","state"=>"DE","zip"=>"47340"],
+["uid"=> "513891619","first_name"=> "Mile","last_name"=> "Smail","gender"=> "Female", "street_address"=>"Ap #220-1424 Nec Road","city"=>"Columbia","state"=>"MD","zip"=>"18185"],
+["uid"=> "148608490","first_name"=> "Delmer","last_name"=> "Stains","gender"=> "Male", "street_address"=>"P.O. Box 700, 7934 Neque Ave","city"=>"Topeka","state"=>"KS","zip"=>"24537"],
+["uid"=> "405862262","first_name"=> "Jared","last_name"=> "Eve","gender"=> "Male", "street_address"=>"4456 Felis, Ave","city"=>"Colchester","state"=>"VT","zip"=>"37969"],
+["uid"=> "258647902","first_name"=> "Randene","last_name"=> "Daniaud","gender"=> "Male", "street_address"=>"Ap #141-5157 Vitae Av.","city"=>"Boise","state"=>"ID","zip"=>"70799"],
+["uid"=> "758269720","first_name"=> "Hebert","last_name"=> "Plenderleith","gender"=> "Male", "street_address"=>"P.O. Box 522, 1715 Enim Avenue","city"=>"Ketchikan","state"=>"AK","zip"=>"99953"],
+["uid"=> "263871697","first_name"=> "Ange","last_name"=> "Faircloth","gender"=> "Female", "street_address"=>"6889 Cursus Av.","city"=>"Lakewood","state"=>"CO","zip"=>"15669"],
+["uid"=> "681175983","first_name"=> "Livvy","last_name"=> "Brend","gender"=> "Male", "street_address"=>"P.O. Box 505, 6843 Nonummy St.","city"=>"Jackson","state"=>"MS","zip"=>"16125"],
+["uid"=> "897738665","first_name"=> "Atlante","last_name"=> "Lowth","gender"=> "Female", "street_address"=>"P.O. Box 551, 1489 Egestas. Rd.","city"=>"Joliet","state"=>"IL","zip"=>"67651"],
+["uid"=> "777496905","first_name"=> "Essa","last_name"=> "Lubeck","gender"=> "Male", "street_address"=>"7348 In Av.","city"=>"Chandler","state"=>"AZ","zip"=>"86923"],
+["uid"=> "628248769","first_name"=> "Irita","last_name"=> "Potebury","gender"=> "Male", "street_address"=>"P.O. Box 368, 263 Vel Rd.","city"=>"Harrisburg","state"=>"PA","zip"=>"38089"],
+["uid"=> "708711936","first_name"=> "Clementine","last_name"=> "McGaughie","gender"=> "Female", "street_address"=>"Ap #182-3981 Dis Avenue","city"=>"Bozeman","state"=>"MT","zip"=>"64156"],
+["uid"=> "186288979","first_name"=> "Joshuah","last_name"=> "Walkowski","gender"=> "Male", "street_address"=>"657-3272 Eu, Avenue","city"=>"Cheyenne","state"=>"WY","zip"=>"89604"],
+["uid"=> "548310122","first_name"=> "Izabel","last_name"=> "MacCostye","gender"=> "Male", "street_address"=>"702-7652 Elementum Road","city"=>"Reno","state"=>"NV","zip"=>"90775"],
+["uid"=> "592951915","first_name"=> "Dodie","last_name"=> "Crewther","gender"=> "Male", "street_address"=>"Ap #554-6870 Neque Rd.","city"=>"Overland Park","state"=>"KS","zip"=>"64728"],
+["uid"=> "183106865","first_name"=> "Emmalynne","last_name"=> "Flanders","gender"=> "Female", "street_address"=>"P.O. Box 524, 2588 Nulla. St.","city"=>"Omaha","state"=>"NE","zip"=>"11369"],
+["uid"=> "837130790","first_name"=> "Guthrey","last_name"=> "Keyworth","gender"=> "Female", "street_address"=>"985-8535 Luctus Av.","city"=>"Oklahoma city","state"=>"OK","zip"=>"70420"],
+["uid"=> "727798114","first_name"=> "Milty","last_name"=> "Rubra","gender"=> "Male", "street_address"=>"3382 Eu Avenue","city"=>"Hilo","state"=>"HI","zip"=>"23658"],
+["uid"=> "287200070","first_name"=> "Lanny","last_name"=> "Le Ball","gender"=> "Male", "street_address"=>"619-6541 Non, Rd.","city"=>"Wichita","state"=>"KS","zip"=>"97111"],
+["uid"=> "439077563","first_name"=> "Ramon","last_name"=> "Dollar","gender"=> "Female", "street_address"=>"P.O. Box 532, 7266 Duis Rd.","city"=>"Covington","state"=>"KY","zip"=>"58954"],
+["uid"=> "338511460","first_name"=> "Michele","last_name"=> "Riby","gender"=> "Female", "street_address"=>"P.O. Box 569, 1659 Tempus Rd.","city"=>"Reading","state"=>"PA","zip"=>"58149"],
+["uid"=> "770388219","first_name"=> "Debee","last_name"=> "Swayton","gender"=> "Female", "street_address"=>"P.O. Box 257, 5612 Ipsum. St.","city"=>"Harrisburg","state"=>"PA","zip"=>"66427"],
+["uid"=> "764659980","first_name"=> "Storm","last_name"=> "Werrett","gender"=> "Female", "street_address"=>"7648 Scelerisque Rd.","city"=>"Shreveport","state"=>"LA","zip"=>"73086"],
+["uid"=> "858924067","first_name"=> "Benoit","last_name"=> "Faircley","gender"=> "Male", "street_address"=>"P.O. Box 783, 4646 Facilisi. Road","city"=>"Fairbanks","state"=>"AK","zip"=>"99952"],
+["uid"=> "661919648","first_name"=> "Barbaraanne","last_name"=> "Medgewick","gender"=> "Male", "street_address"=>"P.O. Box 297, 4886 Hendrerit St.","city"=>"Louisville","state"=>"KY","zip"=>"37020"],
+["uid"=> "398687280","first_name"=> "Mirabel","last_name"=> "Albinson","gender"=> "Male", "street_address"=>"1890 Luctus Rd.","city"=>"Carson city","state"=>"NV","zip"=>"73964"],
+["uid"=> "732980082","first_name"=> "Helenelizabeth","last_name"=> "Azemar","gender"=> "Female", "street_address"=>"Ap #344-2472 Sit Rd.","city"=>"Worcester","state"=>"MA","zip"=>"34113"],
+["uid"=> "561599694","first_name"=> "Catie","last_name"=> "Tindall","gender"=> "Male", "street_address"=>"Ap #633-6313 Quam. Rd.","city"=>"Kansas city","state"=>"KS","zip"=>"18745"],
+["uid"=> "379743409","first_name"=> "Damon","last_name"=> "Peirone","gender"=> "Female", "street_address"=>"P.O. Box 354, 4768 Primis Road","city"=>"Frederick","state"=>"MD","zip"=>"58252"],
+["uid"=> "623187939","first_name"=> "Godfree","last_name"=> "Edmons","gender"=> "Male", "street_address"=>"P.O. Box 407, 6704 Placerat. St.","city"=>"Hattiesburg","state"=>"MS","zip"=>"66954"],
+["uid"=> "168580200","first_name"=> "Katie","last_name"=> "Dunstone","gender"=> "Male", "street_address"=>"5525 Risus Av.","city"=>"Lafayette","state"=>"LA","zip"=>"89360"],
+["uid"=> "632790184","first_name"=> "Thorstein","last_name"=> "Astley","gender"=> "Male", "street_address"=>"273-3125 Vestibulum St.","city"=>"Milwaukee","state"=>"WI","zip"=>"11393"],
+["uid"=> "424931770","first_name"=> "Neale","last_name"=> "Styles","gender"=> "Female", "street_address"=>"781-9560 Nullam St.","city"=>"Chandler","state"=>"AZ","zip"=>"86732"],
+["uid"=> "632039506","first_name"=> "Briant","last_name"=> "Dimeloe","gender"=> "Female", "street_address"=>"Ap #760-264 Elementum Rd.","city"=>"Gary","state"=>"IN","zip"=>"85677"],
+["uid"=> "506523169","first_name"=> "Meir","last_name"=> "Kenrick","gender"=> "Male", "street_address"=>"522-8850 Urna. St.","city"=>"Idaho Falls","state"=>"ID","zip"=>"26781"],
+["uid"=> "515475934","first_name"=> "Herold","last_name"=> "Hebden","gender"=> "Male", "street_address"=>"P.O. Box 501, 1107 Fringilla Ave","city"=>"Reno","state"=>"NV","zip"=>"88914"],
+["uid"=> "751992476","first_name"=> "Godard","last_name"=> "Pourveer","gender"=> "Male", "street_address"=>"Ap #215-8857 Praesent Av.","city"=>"South Portland","state"=>"ME","zip"=>"53456"],
+["uid"=> "637323983","first_name"=> "Candide","last_name"=> "Rablin","gender"=> "Male", "street_address"=>"P.O. Box 779, 6540 Rutrum Avenue","city"=>"Bozeman","state"=>"MT","zip"=>"68223"],
+["uid"=> "362790961","first_name"=> "Hestia","last_name"=> "Thaine","gender"=> "Male", "street_address"=>"741-4580 Quisque Road","city"=>"Salem","state"=>"OR","zip"=>"48373"],
+["uid"=> "728815201","first_name"=> "Conchita","last_name"=> "Vignaux","gender"=> "Female", "street_address"=>"Ap #379-7469 Ridiculus Av.","city"=>"Tallahassee","state"=>"FL","zip"=>"33479"],
+["uid"=> "362034313","first_name"=> "Anastassia","last_name"=> "McGorman","gender"=> "Male", "street_address"=>"Ap #108-8338 Tincidunt Road","city"=>"Helena","state"=>"MT","zip"=>"98250"],
+["uid"=> "697349570","first_name"=> "Cayla","last_name"=> "Wittman","gender"=> "Male", "street_address"=>"9121 Porta Avenue","city"=>"Bellevue","state"=>"NE","zip"=>"64007"],
+["uid"=> "186724138","first_name"=> "Ardis","last_name"=> "Ephgrave","gender"=> "Male", "street_address"=>"323-3730 Quis, Road","city"=>"Rockville","state"=>"MD","zip"=>"75466"],
+["uid"=> "212084817","first_name"=> "Beverlie","last_name"=> "Iliffe","gender"=> "Female", "street_address"=>"785-8875 Parturient Rd.","city"=>"Idaho Falls","state"=>"ID","zip"=>"88385"],
+["uid"=> "613384054","first_name"=> "Vick","last_name"=> "Killiner","gender"=> "Female", "street_address"=>"P.O. Box 864, 1021 Orci. Ave","city"=>"West Jordan","state"=>"UT","zip"=>"82131"],
+["uid"=> "359119357","first_name"=> "Veronica","last_name"=> "Kennermann","gender"=> "Male", "street_address"=>"1251 Non, St.","city"=>"Boston","state"=>"MA","zip"=>"70706"],
+["uid"=> "733849923","first_name"=> "Kimmi","last_name"=> "McLaughlan","gender"=> "Female", "street_address"=>"Ap #776-6739 Metus. Road","city"=>"Lowell","state"=>"MA","zip"=>"58077"],
+["uid"=> "337464286","first_name"=> "Libbey","last_name"=> "McVaugh","gender"=> "Male", "street_address"=>"Ap #187-3272 Lacinia St.","city"=>"Glendale","state"=>"AZ","zip"=>"85540"],
+["uid"=> "339388451","first_name"=> "Balduin","last_name"=> "Betonia","gender"=> "Male", "street_address"=>"Ap #439-4304 Eu, Street","city"=>"Louisville","state"=>"KY","zip"=>"64115"],
+["uid"=> "758190514","first_name"=> "Janifer","last_name"=> "Claire","gender"=> "Male", "street_address"=>"381-483 Fusce Rd.","city"=>"Tuscaloosa","state"=>"AL","zip"=>"36612"],
+["uid"=> "655400950","first_name"=> "Isidora","last_name"=> "Corbin","gender"=> "Male", "street_address"=>"912-8133 Pellentesque Road","city"=>"Oklahoma city","state"=>"OK","zip"=>"37616"],
+["uid"=> "388809641","first_name"=> "Corny","last_name"=> "Delea","gender"=> "Male", "street_address"=>"Ap #419-7886 Cras Street","city"=>"Fort Worth","state"=>"TX","zip"=>"95490"],
+["uid"=> "308184907","first_name"=> "Karoline","last_name"=> "Bertomeu","gender"=> "Female", "street_address"=>"P.O. Box 702, 805 Purus, Av.","city"=>"Fayetteville","state"=>"AR","zip"=>"71187"],
+["uid"=> "771801230","first_name"=> "Hendrick","last_name"=> "Chettle","gender"=> "Male", "street_address"=>"Ap #248-8084 Molestie St.","city"=>"Idaho Falls","state"=>"ID","zip"=>"53641"],
+["uid"=> "313132724","first_name"=> "Nathanil","last_name"=> "Plaid","gender"=> "Female", "street_address"=>"4245 Nulla Rd.","city"=>"Fort Collins","state"=>"CO","zip"=>"88347"],
+["uid"=> "883451695","first_name"=> "Lamont","last_name"=> "Lis","gender"=> "Female", "street_address"=>"175-1141 Ultrices Ave","city"=>"Rockville","state"=>"MD","zip"=>"50136"],
+["uid"=> "779893471","first_name"=> "Claiborne","last_name"=> "Sotworth","gender"=> "Female", "street_address"=>"P.O. Box 640, 6656 Sit St.","city"=>"Mesa","state"=>"AZ","zip"=>"86601"],
+["uid"=> "519330994","first_name"=> "Spike","last_name"=> "Hinkley","gender"=> "Male", "street_address"=>"562-7979 Penatibus Avenue","city"=>"Minneapolis","state"=>"MN","zip"=>"97213"],
+["uid"=> "473872884","first_name"=> "Karylin","last_name"=> "Tenpenny","gender"=> "Female", "street_address"=>"189 Senectus Av.","city"=>"Hilo","state"=>"HI","zip"=>"80422"],
+["uid"=> "811105705","first_name"=> "Kermy","last_name"=> "Vondrach","gender"=> "Male", "street_address"=>"925-8366 Eget Rd.","city"=>"Owensboro","state"=>"KY","zip"=>"81787"],
+["uid"=> "419180263","first_name"=> "Glenden","last_name"=> "Albon","gender"=> "Female", "street_address"=>"Ap #634-2821 Felis St.","city"=>"Chesapeake","state"=>"VA","zip"=>"45864"],
+["uid"=> "824850746","first_name"=> "Nico","last_name"=> "Casetti","gender"=> "Female", "street_address"=>"8167 Quisque Rd.","city"=>"Philadelphia","state"=>"PA","zip"=>"38604"],
+["uid"=> "159675286","first_name"=> "Mordecai","last_name"=> "Bony","gender"=> "Male", "street_address"=>"Ap #550-1309 Nisl St.","city"=>"Springdale","state"=>"AR","zip"=>"71465"],
+["uid"=> "428232475","first_name"=> "Dory","last_name"=> "McColl","gender"=> "Male", "street_address"=>"274-9698 Ultrices. Ave","city"=>"Frederick","state"=>"MD","zip"=>"91112"],
+["uid"=> "773225485","first_name"=> "Aron","last_name"=> "Piatkowski","gender"=> "Male", "street_address"=>"P.O. Box 352, 7188 Ultricies St.","city"=>"Olathe","state"=>"KS","zip"=>"82854"],
+["uid"=> "368328724","first_name"=> "Francklyn","last_name"=> "Sandeman","gender"=> "Male", "street_address"=>"844-892 Egestas. St.","city"=>"Annapolis","state"=>"MD","zip"=>"75505"],
+["uid"=> "497716618","first_name"=> "Gretal","last_name"=> "Botton","gender"=> "Female", "street_address"=>"P.O. Box 111, 2370 In St.","city"=>"Allentown","state"=>"PA","zip"=>"92471"],
+["uid"=> "679293539","first_name"=> "Timmie","last_name"=> "Rorke","gender"=> "Female", "street_address"=>"Ap #718-5402 Sed, Av.","city"=>"Jefferson city","state"=>"MO","zip"=>"61913"],
+["uid"=> "786580555","first_name"=> "Roby","last_name"=> "Monkman","gender"=> "Female", "street_address"=>"Ap #889-9469 Diam Rd.","city"=>"San Diego","state"=>"CA","zip"=>"94896"],
+["uid"=> "724693608","first_name"=> "Elene","last_name"=> "Diess","gender"=> "Male", "street_address"=>"P.O. Box 494, 2959 Cras Road","city"=>"Evansville","state"=>"IN","zip"=>"95943"],
+["uid"=> "138448878","first_name"=> "Norean","last_name"=> "Bouts","gender"=> "Male", "street_address"=>"Ap #659-440 Odio. Rd.","city"=>"Philadelphia","state"=>"PA","zip"=>"61537"],
+["uid"=> "475593793","first_name"=> "Peadar","last_name"=> "Struan","gender"=> "Male", "street_address"=>"385-526 At Street","city"=>"Dover","state"=>"DE","zip"=>"95406"],
+["uid"=> "118501929","first_name"=> "Ruperto","last_name"=> "Haken","gender"=> "Female", "street_address"=>"735-5392 A, Ave","city"=>"Billings","state"=>"MT","zip"=>"42375"],
+["uid"=> "142242821","first_name"=> "Jeanine","last_name"=> "Royans","gender"=> "Female", "street_address"=>"P.O. Box 538, 9780 Aliquam Rd.","city"=>"Chicago","state"=>"IL","zip"=>"29295"],
+["uid"=> "496442447","first_name"=> "Toddie","last_name"=> "Jiras","gender"=> "Female", "street_address"=>"946-3796 Risus Road","city"=>"Virginia Beach","state"=>"VA","zip"=>"95653"],
+["uid"=> "669490996","first_name"=> "Cos","last_name"=> "Eburne","gender"=> "Male", "street_address"=>"5408 Libero. Avenue","city"=>"Norman","state"=>"OK","zip"=>"47483"],
+["uid"=> "446029251","first_name"=> "Luelle","last_name"=> "MacKimmie","gender"=> "Male", "street_address"=>"Ap #432-2355 Quam, Ave","city"=>"Boston","state"=>"MA","zip"=>"25529"],
+["uid"=> "438412455","first_name"=> "Salim","last_name"=> "Blint","gender"=> "Female","street_address"=>"560-843 Non, St.","city"=>"Des Moines","state"=>"IA","zip"=>"50999"]
+];
+
+// After connecting to database, insert the above tables with fields into it
+  $connection = \Drupal::database();
+    foreach ($entries as $entry) {
+      $connection->insert('db_module')->fields($entry)->execute();
+    }
+}
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the random generated database tables used by this module.
+ *
+ * @see hook_schema()
+ *
+ * @ingroup db_module
+ * 
+ * The following fields are defined below:
+ *
+ *        'pid' => 'pid' // Primary Index key
+ *			  'Employee Id' => 'uid',
+ *			  'First Name' => 'first_name',
+ *			  'Last_Name' => 'last_name',
+ *			  'Gender' => 'gender',
+ *			  'Street Address' => 'street_address',
+ *			  'City' => 'city',
+ *			  'State' => 'state',
+ *			  'Zip Code' => 'zip',
+ *		
+ */
+function db_module_schema() {
+  $schema['db_module'] = [
+    'description' => 'Stores example person entries for demonstration purposes.',
+      'fields' => [
+        'pid' => [
+          'type' => 'serial',
+          'not null' => TRUE,
+          'description' => 'Primary Key: Unique person ID.',
+        ],
+        'uid' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+          'description' => "Creator user's {users}.uid",
+        ],
+        'first_name' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'First Name of the person.',
+        ],
+        'last_name' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Last Name of the person.',
+        ],
+        'gender' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Gender.',
+        ],
+	      'street_address' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Street Address.',
+        ],
+	      'city' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'City.',
+        ],
+	      'state' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'State.',
+        ],
+	      'zip' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Zip Code.',
+        ],
+      ],
+    'primary key' => ['pid'],
+      'indexes' => [
+	      'uid' => ['uid'],
+        'first_name' => ['first_name'],
+        'last_name' => ['last_name'],
+        'gender' => ['gender'],
+	      'street_address' => ['street_address'],
+	      'city' => ['city'],
+	      'state' => ['state'],
+	      'zip' => ['zip'],
+      ],
+  ];
+
+  return $schema;
+}

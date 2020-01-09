@@ -1,0 +1,192 @@
+/*
+  @file dbmodule.css
+  This file handles css for the following pages, DbModuleListForm.php, DbModuleAddForm.php, and DbModuleUpdateForm.php
+*/
+
+/* Loding dots animation for label above search box */
+@keyframes blink {50% { color: transparent }}
+.loader__dot { animation: 1s blink infinite }
+.loader__dot:nth-child(2) { animation-delay: 250ms }
+.loader__dot:nth-child(3) { animation-delay: 500ms }
+
+/* override to bootstrap btn-lg-custom */
+.btn-lg-custom
+{
+  font-family : Noto Sans, sans-serif;
+	font-size: 18px !important;	
+  font-family : Noto Sans, sans-serif;
+}
+
+/* Class for label text above search box */
+.small_txt_loading_dot
+{
+  font-size: 22px;	
+  text-align: center !important;
+  font-family : Noto Sans, sans-serif;
+}
+
+/* Small text to use */
+.small_txt
+{
+  font-size: .875rem;	
+  text-align: center !important;
+  font-family : Noto Sans, sans-serif;
+}
+
+/* Search box css */
+#textcheck
+{
+  font-size: 20px;	
+  font-family : Noto Sans, sans-serif;
+}
+
+/* Hide block for use */
+.hide-my-block
+{
+	display:none;
+}
+
+/* Label above search box */
+#checktext_label
+{
+	display:block;
+	float:left;
+	margin: 0px 0px 4px 1px;
+}
+
+/* HTML elements font override */
+body,h1,h2,h3,h4,h5,div,span,p
+{
+	font-family : Noto Sans, sans-serif;
+}
+/* table elements font override */
+table
+{
+	font-size: 16px;	
+	font-family : Noto Sans, sans-serif;
+	vertical-align:middle;
+}
+table td, table th, table tr
+{
+	font-size: 16px;
+	font-family : Noto Sans, sans-serif;
+	vertical-align:middle !important;
+}
+#edit-table > thead, #edit-tablesort-table > thead > tr
+{
+  background-color: #333333;
+  background: linear-gradient( #666666, #333333, #666666);
+}
+#edit-table.table-custom
+{
+  margin: 5px 0px 80px 0px;
+  padding: 5px 0px 80px 0px;
+}
+#edit-table.table-custom > thead > tr > th, #edit-table.table-custom > tbody > tr > td, .form-text, #edit-gender, #edit-state
+{
+  font-size: 22px !important;
+  font-family: Noto Sans, sans-serif !important;
+}
+#edit-tablesort-table > tbody > tr > td:nth-child(2), #edit-tablesort-table > thead > tr > th:nth-child(2)
+{
+  text-align: center;
+}
+#edit-tablesort-table > thead > tr > th > a
+{
+  display: block;
+}
+
+/* The link of each Employee Id button */
+.alink {
+  padding: 6px 16px !important;
+}
+/* bootstrap class override */
+.form-item label
+{
+	font-size: 20px !important;
+	font-family : Noto Sans, sans-serif;
+	margin-top:30px;
+}
+
+/* Division in update entry page */
+#update-entry
+{
+	padding:40px 10px;
+	margin: 40px 10px;
+}
+
+/* bootstrap class override */
+.modal-btn, .modal-content, .modal-footer
+{
+	font-family : Noto Sans, sans-serif !important; 
+	font-size: 20px !important; 
+	
+}
+/* bootstrap modal id override */
+#loginModalLongTitle
+{
+	font-family : Noto Sans, sans-serif !important; 
+	font-size: 28px !important; 
+	font-weight:bold !important; 
+}
+/* bootstrap class override */
+.form-item-p
+{
+	background-color: #F3F3F3;
+}
+/* bootstrap class override */
+.form-control
+{
+	font-family : Noto Sans, sans-serif !important; 
+}
+/* bootstrap class override for btn-group */
+#btn-group-custom
+{
+	margin:80px 0px 30px 0px;
+	display:block !important;
+}
+/* Delete button */
+#link-btn
+{
+	border-top-right-radius: .3em !important;
+	border-bottom-right-radius: .3em !important;
+	margin-left : -5px !important;
+}
+#link-btn:hover,#link-btn:focus,#link-btn:active
+{
+	background-color: #fff !important;
+	color:#dc3545 !important;
+}
+/* Back to List button */
+#edit-back
+{
+	margin-left : -5px !important;
+}
+#edit-back:hover,#edit-back:focus,#edit-back:active
+{
+	color: #007bff !important;
+    background-color: #fff !important;
+}
+/* Update Entry and Add Entry buttons */
+#edit-submit, input[name^="button_1"]
+{
+	background-color: #28a745 !important;
+	color:#fff !important;
+  margin-left : -5px !important;
+}
+#edit-submit :hover, input[name^="button_1"]:hover,input[name^="button_1"]:focus,input[name^="button_1"]:active
+{
+	border-color: #28a745 !important;
+	color: #28a745 !important;
+  background-color: #fff !important;
+}
+
+/* Search Result highlight class */
+.highlight
+{
+  background: rgba(255, 230, 0, 0.7) !important;
+  padding:0px 1px;
+  display:inline-block;
+}
+
+
